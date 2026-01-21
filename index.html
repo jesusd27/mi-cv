@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesus David Hurtado | Perfil Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #334155; scroll-behavior: smooth; }
+        
+        /* Eliminar cursivas globales */
+        * { font-style: normal !important; }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 1000px;
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
+        }
+
+        .accordion-item.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+
+        .chevron-icon {
+            transition: transform 0.3s ease;
+        }
+
+        /* Estilo para el menú móvil */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-10px);
+            opacity: 0;
+            pointer-events: none;
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navegación Responsiva -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="font-bold text-xl text-slate-900 tracking-tight">JH<span class="text-blue-600">.</span></div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+                    <a href="#perfil" class="hover:text-blue-600 transition">Perfil</a>
+                    <a href="#habilidades" class="hover:text-blue-600 transition">Habilidades</a>
+                    <a href="#experiencia" class="hover:text-blue-600 transition">Experiencia</a>
+                    <a href="#educacion" class="hover:text-blue-600 transition">Educación</a>
+                    <a href="#contacto" class="hover:text-blue-600 transition">Contacto</a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none p-2">
+                    <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="absolute top-16 left-0 w-full bg-white border-b border-slate-200 md:hidden z-40 shadow-xl">
+            <div class="flex flex-col p-4 space-y-4 text-center font-bold text-xs uppercase tracking-widest text-slate-600">
+                <a href="#perfil" class="mobile-link py-2 hover:text-blue-600">Perfil</a>
+                <a href="#habilidades" class="mobile-link py-2 hover:text-blue-600">Habilidades</a>
+                <a href="#experiencia" class="mobile-link py-2 hover:text-blue-600">Experiencia</a>
+                <a href="#educacion" class="mobile-link py-2 hover:text-blue-600">Educación</a>
+                <a href="#contacto" class="mobile-link py-2 hover:text-blue-600">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Perfil / Hero -->
+    <header id="perfil" class="bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 py-12 md:py-20">
+            <div class="text-center md:text-left">
+                <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
+                    <span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-full uppercase tracking-widest border border-blue-100">Ingeniero Industrial</span>
+                    <span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold rounded-full uppercase tracking-widest border border-emerald-100">Tecnólogo de Alimentos</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tighter">Jesus David Hurtado M.</h1>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+                    <div class="lg:col-span-2 space-y-4 text-left">
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            Ingeniero Industrial y Tecnólogo de Alimentos orientado a resultados, con experiencia en calidad, producción e inventarios, capaz de integrarse tanto a entornos digitales como operativos y administrativos. He trabajado en la validación de sitios web y contenidos digitales, reporte de incidencias y colaboración con equipos técnicos asegurando altos estándares de calidad.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            Cuento con habilidades en planeación y seguimiento de la producción, generación de órdenes productivas, control de materias primas y aplicación de metodologías 5S y PEPS, garantizando trazabilidad, orden y cumplimiento de especificaciones técnicas. Me caracterizo por ser proactivo, analítico y organizado, con enfoque en la mejora continua y el cumplimiento de objetivos estratégicos.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4 shadow-sm">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Información de Contacto</h4>
+                        <div class="flex items-center gap-3 text-sm text-slate-600 text-left">
+                            <i class="fas fa-id-badge text-blue-500 w-4"></i>
+                            <span>TP: 76228-407767 VLL</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-slate-600 text-left">
+                            <i class="fas fa-motorcycle text-blue-500 w-4"></i>
+                            <span>Licencia A2</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-slate-600 text-left">
+                            <i class="fas fa-map-marker-alt text-blue-500 w-4"></i>
+                            <span>Zarzal, Valle del Cauca</span>
+                        </div>
+                        <div class="pt-2 border-t border-slate-200">
+                            <span class="text-[10px] text-slate-400 font-bold uppercase block mb-2">Disponibilidad</span>
+                            <span class="text-xs bg-white px-2 py-1 rounded border border-slate-200 text-slate-500">Traslado nacional inmediato</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Habilidades Técnicas -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-black text-slate-900 mb-6 flex items-center gap-3">
+                        <i class="fas fa-tools text-blue-600"></i>
+                        Habilidades Técnicas
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Aseguramiento de Calidad (QA)</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Gestión y Control de Inventarios</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Metodologías Lean & 5S</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Análisis de Datos (Excel Avanzado)</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Planificación de Producción</span>
+                    </div>
+                </div>
+
+                <!-- Habilidades Blandas -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="text-lg font-black text-slate-900 mb-6 flex items-center gap-3">
+                        <i class="fas fa-users text-emerald-600"></i>
+                        Habilidades Blandas
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Atención al Detalle</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Pensamiento Analítico</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Adaptabilidad</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Comunicación Asertiva</span>
+                        <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm font-semibold text-slate-700">Orientación a Resultados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section id="experiencia" class="py-16 md:py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Experiencia Laboral</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4" id="experienceAccordion">
+                <!-- Se cargan vía JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación y Referencias -->
+    <section id="educacion" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+                <!-- Educación Académica -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm shadow-lg">E</span>
+                        Formación Académica
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="pl-4 border-l-2 border-blue-600 bg-white p-4 rounded-r-xl shadow-sm text-left">
+                            <h4 class="font-bold text-slate-900 text-sm">INGENIERO INDUSTRIAL</h4>
+                            <p class="text-xs text-slate-500 mt-1">Universidad del Valle | Julio, 2017</p>
+                        </div>
+                        <div class="pl-4 border-l-2 border-emerald-500 bg-white p-4 rounded-r-xl shadow-sm text-left">
+                            <h4 class="font-bold text-slate-900 text-sm">TECNÓLOGO DE ALIMENTOS</h4>
+                            <p class="text-xs text-slate-500 mt-1">Universidad del Valle | Agosto, 2019</p>
+                        </div>
+                        <div class="pl-4 border-l-2 border-slate-400 bg-white p-4 rounded-r-xl shadow-sm text-left">
+                            <h4 class="font-bold text-slate-900 text-sm uppercase">Bachiller Técnico Industrial</h4>
+                            <p class="text-xs text-slate-500 mt-1">Especialidad Mecánica</p>
+                            <p class="text-[10px] text-slate-400 mt-1 uppercase">I.E. Manuel Antonio Bonilla | 2008</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formación Complementaria (Nueva sección basada en CV 2026) -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                        <i class="fas fa-certificate text-blue-600"></i>
+                        Formación Complementaria
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                            <h4 class="font-bold text-slate-900 text-[11px] uppercase tracking-wide">ANÁLISIS FINANCIERO</h4>
+                            <p class="text-[10px] text-slate-400 mt-1">SENA | Septiembre, 2024</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                            <h4 class="font-bold text-slate-900 text-[11px] uppercase tracking-wide">INDUCCIÓN A LAS ESTRATEGIAS PARA LA MEJORA CONTINUA LEAN</h4>
+                            <p class="text-[10px] text-slate-400 mt-1">SENA | Agosto, 2024</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                            <h4 class="font-bold text-slate-900 text-[11px] uppercase tracking-wide">USO DE MICROSOFT EXCEL EN LABORES OPERATIVAS Y ADMINISTRATIVAS</h4>
+                            <p class="text-[10px] text-slate-400 mt-1">SENA | Diciembre, 2022</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                            <h4 class="font-bold text-slate-900 text-[11px] uppercase tracking-wide">MANEJO DE HERRAMIENTAS MICROSOFT OFFICE 2016: EXCEL</h4>
+                            <p class="text-[10px] text-slate-400 mt-1">SENA | Agosto, 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Referencias -->
+            <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center text-sm shadow-lg">R</span>
+                    Referencias Profesionales
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                        <p class="font-bold text-xs text-slate-900">Santiago Dorado Montezuma</p>
+                        <p class="text-[9px] text-blue-600 uppercase font-black tracking-wider mt-1">QA Lead - Orbidi Digital</p>
+                        <p class="text-xs mt-3 font-mono text-slate-500"><i class="fas fa-phone-alt mr-2"></i>3013625686</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                        <p class="font-bold text-xs text-slate-900">Joan Felipe Prado Hurtado</p>
+                        <p class="text-[9px] text-blue-600 uppercase font-black tracking-wider mt-1">Jefe de Planta - Agrocereales del Valle</p>
+                        <p class="text-xs mt-3 font-mono text-slate-500"><i class="fas fa-phone-alt mr-2"></i>3157897041</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                        <p class="font-bold text-xs text-slate-900">Jennyfer Lorena Carvajal</p>
+                        <p class="text-[9px] text-blue-600 uppercase font-black tracking-wider mt-1">Coordinadora - Fundación Acción por Colombia</p>
+                        <p class="text-xs mt-3 font-mono text-slate-500"><i class="fas fa-phone-alt mr-2"></i>3178648813</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200 text-left">
+                        <p class="font-bold text-xs text-slate-900">Camila Vivi Alzate</p>
+                        <p class="text-[9px] text-blue-600 uppercase font-black tracking-wider mt-1">Psicóloga - Comfandi</p>
+                        <p class="text-xs mt-3 font-mono text-slate-500"><i class="fas fa-phone-alt mr-2"></i>3008729768</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-slate-900 py-16 px-4 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-black text-white mb-2 tracking-tight">Contacto</h2>
+            <p class="text-slate-500 text-sm mb-10">Disponible para integración inmediata a equipos técnicos y productivos.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:jdhurtado2707@gmail.com" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition flex items-center justify-center gap-3">
+                    <i class="far fa-envelope"></i> jdhurtado2707@gmail.com
+                </a>
+                <a href="tel:+573105505905" class="px-8 py-4 bg-white text-slate-900 rounded-2xl font-bold hover:bg-slate-100 transition flex items-center justify-center gap-3">
+                    <i class="fas fa-phone-alt"></i> 3105505905
+                </a>
+            </div>
+            <p class="text-slate-700 text-[10px] mt-12 uppercase tracking-[0.4em]">Zarzal - Cali - Pereira - Armenia</p>
+        </div>
+    </footer>
+
+    <script>
+        // Control de Menú Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            const isActive = mobileMenu.classList.toggle('active');
+            menuIcon.className = isActive ? 'fas fa-times text-xl' : 'fas fa-bars text-xl';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuIcon.className = 'fas fa-bars text-xl';
+            });
+        });
+
+        // Datos de Experiencia actualizados según la Hoja de Vida 2026
+        const experiences = [
+            {
+                role: "QA ANALYST JR",
+                company: "ORBIDI DIGITAL S.A.S",
+                period: "Abril 2025 - Enero 2026",
+                location: "Cali, Valle del Cauca",
+                tasks: [
+                    "Ejecutar auditorias de calidad digital y validaciones SEO técnicas asegurando que el producto final de la compañía cumpla con las especificaciones y lineamientos determinados.",
+                    "Analizar métricas básicas en Google Search Console y Google Analytics para identificar oportunidades de mejora en tráfico, indexación y experiencia del usuario.",
+                    "Revisar la correcta implementación de elementos SEO on-page (estructura HTML, metadatos, sitemaps y robots.txt).",
+                    "Realizar pruebas funcionales, de usabilidad y accesibilidad (WCAG) en distintos dispositivos y navegadores.",
+                    "Documentar incidencias técnicas de manera clara y ordenada, colaborando con equipos de desarrollo y diseño."
+                ]
+            },
+            {
+                role: "ALMACENISTA - ANALISTA INVENTARIOS",
+                company: "SYPELC SAS",
+                period: "Agosto 2024 - Enero 2025",
+                location: "Cartago, Valle del Cauca",
+                tasks: [
+                    "Realizar seguimiento y control de inventario del almacén (Sypelc y Energía de Pereira) y hacer requerimiento de materiales.",
+                    "Gestionar cotizaciones y contacto con proveedores, verificando mercancía según órdenes de compra.",
+                    "Organizar el almacén mediante la aplicación de 5'S para mantener el área limpia y ordenada.",
+                    "Realizar alistamiento y entrega de materiales mediante metodología PEPS."
+                ]
+            },
+            {
+                role: "COORDINADOR DE PRODUCCIÓN",
+                company: "MAGNETRON S.A.S",
+                period: "Septiembre 2023 - Febrero 2024",
+                location: "Pereira, Risaralda",
+                tasks: [
+                    "Coordinar y dar seguimiento diario a la producción conforme al cronograma definido.",
+                    "Articular la operación productiva coordinando con áreas internas para la disponibilidad de materiales.",
+                    "Supervisar el cumplimiento de normas de seguridad industrial y uso de EPP.",
+                    "Revisar conforme a diseño técnico que los productos cumplan con las especificaciones requeridas."
+                ]
+            },
+            {
+                role: "COORDINADOR DE INVENTARIOS",
+                company: "FUNDACIÓN ACCIÓN POR COLOMBIA",
+                period: "Octubre 2021 - Junio 2023",
+                location: "Jamundí, Valle del Cauca",
+                tasks: [
+                    "Coordinar el control integral de inventarios de materias primas en bodega.",
+                    "Monitorear productos perecederos y fechas de vencimiento para optimizar la rotación.",
+                    "Registrar y validar los movimientos de inventario mediante formatos de entrada y salida.",
+                    "Mantener actualizadas las bases de datos facilitando la trazabilidad y soporte a auditorías."
+                ]
+            },
+            {
+                role: "COORDINADOR PROGRAMACIÓN DE PRODUCCIÓN",
+                company: "PLÁSTICOS FÉNIX S.A.S",
+                period: "Julio 2020 - Diciembre 2020",
+                location: "La Tebaida, Quindío",
+                tasks: [
+                    "Realizar y gestionar las actividades correspondientes al control de la programación de producción.",
+                    "Corroborar la existencia de materia prima, materiales e insumos requeridos.",
+                    "Planear la producción para procesos de inyección, soplado, herrajes y ensamble.",
+                    "Generar órdenes de producción por cada proceso productivo."
+                ]
+            },
+            {
+                role: "AUDITOR DE CALIDAD",
+                company: "DON POLLO S.A.S",
+                period: "Diciembre 2019 - Marzo 2020",
+                location: "Armenia, Quindío",
+                tasks: [
+                    "Visitar puntos de ventas y bodegas a nivel nacional para determinar el estado del producto.",
+                    "Capacitar, retroalimentar y evaluar al personal administrativo y operativo.",
+                    "Verificar cumplimiento de lineamientos de calidad establecidos por la organización.",
+                    "Generar informes de estado de calidad detallados para la dirección de calidad."
+                ]
+            }
+        ];
+
+        function renderAccordion() {
+            const container = document.getElementById('experienceAccordion');
+            container.innerHTML = experiences.map((exp, index) => `
+                <div class="accordion-item bg-white border border-slate-200 rounded-2xl transition-all duration-300 hover:border-blue-300 text-left">
+                    <button class="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none" onclick="toggleAccordion(this)">
+                        <div class="pr-4">
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">${exp.role}</h4>
+                            <p class="text-[10px] md:text-xs text-blue-600 font-bold mt-1 uppercase tracking-wider">${exp.company} <span class="text-slate-300 mx-2 font-normal">|</span> <span class="text-slate-400 font-normal normal-case">${exp.period}</span></p>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-300 chevron-icon"></i>
+                    </button>
+                    <div class="accordion-content px-6 bg-slate-50/50 rounded-b-2xl">
+                        <p class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-4">Ubicación: ${exp.location}</p>
+                        <ul class="space-y-3 pb-6">
+                            ${exp.tasks.map(task => `
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></span>
+                                    <p class="text-sm text-slate-600 leading-relaxed">${task}</p>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleAccordion(btn) {
+            const item = btn.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderAccordion);
+    </script>
+</body>
+</html>
