@@ -45,6 +45,11 @@
             opacity: 1;
             pointer-events: auto;
         }
+
+        /* Enfoque para inputs */
+        input:focus, textarea:focus {
+            background-color: #fff !important;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -178,7 +183,7 @@
         </div>
     </section>
 
-    <!-- Educación y Referencias -->
+    <!-- Educación -->
     <section id="educacion" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
         <div class="max-w-5xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
@@ -205,7 +210,7 @@
                     </div>
                 </div>
 
-                <!-- Formación Complementaria (Nueva sección basada en CV 2026) -->
+                <!-- Formación Complementaria -->
                 <div>
                     <h3 class="text-xl font-bold text-slate-900 mb-8 flex items-center gap-3">
                         <i class="fas fa-certificate text-blue-600"></i>
@@ -231,19 +236,73 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
             
-    <!-- Footer -->
-    <footer id="contacto" class="bg-slate-900 py-16 px-4 text-center">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl font-black text-white mb-2 tracking-tight">Contacto</h2>
-            <p class="text-slate-500 text-sm mb-10">Disponible para integración inmediata a equipos técnicos y productivos.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:jdhurtado2707@gmail.com" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition flex items-center justify-center gap-3">
-                    <i class="far fa-envelope"></i> jdhurtado2707@gmail.com
-                </a>
-              
+    <!-- Footer / Sección de Contacto con Formulario -->
+    <footer id="contacto" class="bg-slate-900 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-white mb-2 tracking-tight">Contacto</h2>
+                <p class="text-slate-400 text-sm">¿Interesado en mi perfil? Envíame un mensaje directo.</p>
             </div>
-            <p class="text-slate-700 text-[10px] mt-12 uppercase tracking-[0.4em]">Zarzal - Cali - Pereira - Armenia</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Información de contacto directa -->
+                <div class="space-y-8">
+                    <div class="text-left">
+                        <h4 class="text-[10px] font-black text-blue-500 uppercase tracking-[0.2em] mb-4">Canal Directo</h4>
+                        <a href="mailto:jdhurtado2707@gmail.com" class="group flex items-center gap-4 text-white hover:text-blue-400 transition-colors">
+                            <div class="w-12 h-12 bg-slate-800 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-all">
+                                <i class="far fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-bold uppercase">Correo Electrónico</p>
+                                <p class="text-sm">jdhurtado2707@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="text-left">
+                        <h4 class="text-[10px] font-black text-emerald-500 uppercase tracking-[0.2em] mb-4">Ubicación y Movilidad</h4>
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-12 h-12 bg-slate-800 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-xl text-slate-400"></i>
+                            </div>
+                            <p class="text-sm text-slate-300 italic">Disponible para traslado nacional inmediato</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto (Action con Formspree para tu correo) -->
+                <div class="bg-white p-8 rounded-3xl shadow-2xl">
+                    <form action="https://formspree.io/f/jdhurtado2707@gmail.com" method="POST" class="space-y-4">
+                        <div class="text-left">
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">Nombre Completo</label>
+                            <input type="text" name="nombre" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Ej. Juan Pérez">
+                        </div>
+                        
+                        <div class="text-left">
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">Correo Electrónico</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="correo@ejemplo.com">
+                        </div>
+
+                        <div class="text-left">
+                            <label class="block text-[10px] font-bold text-slate-400 uppercase mb-1 ml-1">Mensaje</label>
+                            <textarea name="mensaje" rows="4" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition resize-none" placeholder="¿En qué puedo ayudarte?"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-blue-600 text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-blue-700 transform hover:-translate-y-1 transition-all shadow-lg shadow-blue-500/20">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-20 pt-8 border-t border-slate-800">
+                <p class="text-slate-600 text-[10px] uppercase tracking-[0.4em] text-center">Zarzal - Cali - Pereira - Armenia</p>
+                <p class="text-slate-800 text-[9px] mt-4 text-center">© 2026 Jesus David Hurtado M. - Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
@@ -266,7 +325,7 @@
             });
         });
 
-        // Datos de Experiencia actualizados según la Hoja de Vida 2026
+        // Datos de Experiencia
         const experiences = [
             {
                 role: "QA ANALYST JR",
@@ -373,6 +432,9 @@
             const item = btn.parentElement;
             const isActive = item.classList.contains('active');
             
+            // Cerrar otros si se desea (opcional)
+            // document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+
             if (isActive) {
                 item.classList.remove('active');
             } else {
@@ -383,8 +445,4 @@
         document.addEventListener('DOMContentLoaded', renderAccordion);
     </script>
 </body>
-
 </html>
-
-
-
